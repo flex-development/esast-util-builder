@@ -28,7 +28,9 @@ This is a tiny but useful utility for building [esast][esast] nodes.
 
 ## When should I use this?
 
-**TODO**: when should I use this?
+Use this package when you need to create [esast][esast] nodes.
+
+If you need to build nodes for other ASTs, use [`unist-util-builder`][unist-util-builder] instead.
 
 ## Install
 
@@ -84,4 +86,5 @@ community you agree to abide by its terms.
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [esmsh]: https://esm.sh/
 [typescript]: https://www.typescriptlang.org
+[unist-util-builder]: https://github.com/flex-development/unist-util-builder
 [yarn]: https://yarnpkg.com
