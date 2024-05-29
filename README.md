@@ -110,12 +110,24 @@ Union of nodes that can occur in esast (TypeScript type).
 
 Construct a union of esast node builders (TypeScript type).
 
-**See also**: [`ub.Builder`][buildert]
+**See also**: [`ub.AnyBuilder`][anybuilder], [`ub.Builder`][buildert]
 
 <!-- dprint-ignore-start -->
 ```ts
 type Builder<T extends Type = Type<AnyNode>> = T extends Type<AnyNode>
-  ? ub.Builder<Match<AnyNode, T>>
+  ? ub.Builder<Match<AnyNode, T>> extends infer B extends ub.AnyBuilder
+    ? B extends ub.BuilderValue
+      ? B
+      : B extends readonly Node[]
+        ? B[number][]
+        : {
+            [K in keyof B]: K extends 'children'
+              ? B[K] extends infer U extends readonly Node[]
+                ? U[number][]
+                : never
+              : B[K]
+          }
+    : never
   : never
 ```
 <!-- dprint-ignore-end -->
@@ -149,6 +161,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 This project has a [code of conduct](CODE_OF_CONDUCT.md). By interacting with this repository, organization, or
 community you agree to abide by its terms.
 
+[anybuilder]: https://github.com/flex-development/unist-util-builder#anybuilder
 [anynode]: https://github.com/flex-development/esast/blob/main/src/types/any-node.ts
 [buildert]: https://github.com/flex-development/unist-util-builder#buildert
 [esast]: https://github.com/flex-development/esast
