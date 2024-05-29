@@ -19,6 +19,11 @@
 - [Install](#install)
 - [Use](#use)
 - [API](#api)
+  - [`u(type[, builder])`](#utype-builder)
+  - [`AnyNode`](#anynode)
+  - [`Builder<[T]>`](#buildert)
+  - [`Match<N, Check>`](#matchn-check)
+  - [`Type<[T]>`](#typet)
 - [Types](#types)
 - [Related](#related)
 - [Contribute](#contribute)
@@ -70,7 +75,64 @@ In browsers with [`esm.sh`][esmsh]:
 
 ## API
 
-**TODO**: api
+This package exports the identifier [`u`](#utype-builder). There is no default export.
+
+### `u(type[, builder])`
+
+Build an [esast][esast] node using a child node array, properties object, or value.
+
+If `builder` is omitted, a void node (a node with only a `type` field) will be created.
+
+> 👉 Undefined literals must be created using a properties object, rather than a value. Passing `undefined` will create
+> a void node.
+
+#### Type Parameters
+
+- `T` (`Type<AnyNode>`) - esast node type
+
+##### Parameters
+
+- `type` (`T`) - esast node type
+- `builder` ([`Builder<T>`](#buildert), optional) - node children, properties, or value
+
+##### Returns
+
+`Match<AnyNode, T>` new esast node.
+
+### `AnyNode`
+
+Union of nodes that can occur in esast (TypeScript type).
+
+> 👉 This type is exported from [`@flex-development/esast`][esast].\
+> See [`AnyNode`][anynode] for more details.
+
+### `Builder<[T]>`
+
+Construct a union of esast node builders (TypeScript type).
+
+**See also**: [`ub.Builder`][buildert]
+
+<!-- dprint-ignore-start -->
+```ts
+type Builder<T extends Type = Type<AnyNode>> = T extends Type<AnyNode>
+  ? ub.Builder<Match<AnyNode, T>>
+  : never
+```
+<!-- dprint-ignore-end -->
+
+### `Match<N, Check>`
+
+Check if node `N` passes a test. (TypeScript type).
+
+> 👉 This type is exported from [`@flex-development/unist-util-types`][unist-util-types].\
+> See [`Match<N, Check>`][matchn-check] for more details.
+
+### `Type<[T]>`
+
+Extract [*type*][type] from node `T` (TypeScript type).
+
+> 👉 This type is exported from [`@flex-development/unist-util-types`][unist-util-types].\
+> See [`Type<[T]>`][typet] for more details.
 
 ## Types
 
@@ -87,9 +149,15 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 This project has a [code of conduct](CODE_OF_CONDUCT.md). By interacting with this repository, organization, or
 community you agree to abide by its terms.
 
+[anynode]: https://github.com/flex-development/esast/blob/main/src/types/any-node.ts
+[buildert]: https://github.com/flex-development/unist-util-builder#buildert
 [esast]: https://github.com/flex-development/esast
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 [esmsh]: https://esm.sh/
+[matchn-check]: https://github.com/flex-development/unist-util-types#typet
+[type]: https://github.com/syntax-tree/unist#type
 [typescript]: https://www.typescriptlang.org
+[typet]: https://github.com/flex-development/unist-util-types#typet
 [unist-util-builder]: https://github.com/flex-development/unist-util-builder
+[unist-util-types]: https://github.com/flex-development/unist-util-types
 [yarn]: https://yarnpkg.com
