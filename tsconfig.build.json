@@ -6,7 +6,6 @@
     "paths": {
       "#src/*": ["src/*"]
     },
-    "skipLibCheck": false,
     "target": "es2022"
   },
   "exclude": [],
