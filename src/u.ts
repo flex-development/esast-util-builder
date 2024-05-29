@@ -35,6 +35,7 @@ function u<T extends Type<AnyNode> = Type<AnyNode>>(
   type: T,
   builder?: Builder<T>
 ): Match<AnyNode, T> {
+  // @ts-expect-error ts(2769) tuples overridden
   return build(type as unknown as Type<Match<AnyNode, T>>, builder)
 }
 
