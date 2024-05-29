@@ -24,7 +24,7 @@
 
 ## What is this?
 
-**TODO**: what is this?
+This is a tiny but useful utility for building [esast][esast] nodes.
 
 ## When should I use this?
 
