@@ -20,6 +20,7 @@
 - [Use](#use)
 - [API](#api)
 - [Types](#types)
+- [Related](#related)
 - [Contribute](#contribute)
 
 ## What is this?
@@ -74,6 +75,10 @@ In browsers with [`esm.sh`][esmsh]:
 ## Types
 
 This package is fully typed with [TypeScript][typescript].
+
+## Related
+
+- [`esast`][esast] &mdash; ecmascript abstract syntax tree format
 
 ## Contribute
 
