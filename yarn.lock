@@ -1522,7 +1522,7 @@ __metadata:
     "@flex-development/mlly": "npm:1.0.0-alpha.18"
     "@flex-development/pathe": "npm:2.0.0"
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
-    "@flex-development/unist-util-builder": "npm:1.0.0"
+    "@flex-development/unist-util-builder": "npm:2.0.0"
     "@flex-development/unist-util-types": "npm:1.6.1"
     "@html-eslint/eslint-plugin": "npm:0.25.0"
     "@html-eslint/parser": "npm:0.25.0"
@@ -1923,13 +1923,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/unist-util-builder@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@flex-development/unist-util-builder@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-builder%2F1.0.0%2F268e7f80fefe192a1f809f59e226c06a7a2f942c"
+"@flex-development/unist-util-builder@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@flex-development/unist-util-builder@npm:2.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-builder%2F2.0.0%2F2589c6774a811c50c2d08501dfcd1a5ed551c883"
   dependencies:
-    "@flex-development/unist-util-types": "npm:1.6.0"
+    "@flex-development/unist-util-types": "npm:1.6.1"
     "@types/unist": "npm:3.0.2"
-  checksum: 10/3885f02a6227dbd27a97d117555d81bfdfcba85c146ea971137ea21d9d7fc6b69c572910ab9d314a34d7a01b3ba45832db0b0aaf605f1a2f4c2c3f8693e8f784
+  checksum: 10/58e6dc90395b636d7c02d5ab5966a8fbdaf0e9a01c8ff99398e98f8570b422b9c08492365968a85517d6d7991f095a11732a37f775a5af8773c2dda2f673de6d
   languageName: node
   linkType: hard
 
@@ -1939,15 +1939,6 @@ __metadata:
   peerDependencies:
     "@types/unist": ">=3.0.2"
   checksum: 10/110ec112363147784c6f4a32473a1a44a76d28b775fe3d37bbe46b09e7c9f1f67dd0c8d7b9ec5bbe5b8f4d915cbbb826e3b1efc70c0cb5ca020c34b72351c4c5
-  languageName: node
-  linkType: hard
-
-"@flex-development/unist-util-types@npm:1.6.0":
-  version: 1.6.0
-  resolution: "@flex-development/unist-util-types@npm:1.6.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.6.0%2F4e40cc3dadce847a603efae356dca9da4af17bdb"
-  peerDependencies:
-    "@types/unist": ">=3.0.2"
-  checksum: 10/cdbf97ecb7a24f36e427b531042fee85704cbfa613aaf0146a8633ad48244072d6c66de5aa23d472dd4216c74174cfbb25f46a5b27f937a6913cee03c7da0f31
   languageName: node
   linkType: hard
 
