@@ -75,7 +75,7 @@
     "typecheck:watch": "vitest --mode=typecheck --typecheck"
   },
   "dependencies": {
-    "@flex-development/docast": "1.0.0-alpha.17",
+    "@flex-development/docast": "1.0.0-alpha.18",
     "@flex-development/esast": "1.0.0-alpha.5",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-types": "1.6.1",
