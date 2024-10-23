@@ -105,7 +105,7 @@
     "@typescript-eslint/parser": "7.18.0",
     "@vates/toggle-scripts": "1.0.0",
     "@vitest/coverage-v8": "1.6.0",
-    "chai": "5.1.1",
+    "chai": "5.1.2",
     "cross-env": "7.0.3",
     "cspell": "8.15.4",
     "dprint": "0.47.4",
@@ -146,7 +146,7 @@
     "yaml-eslint-parser": "1.2.3"
   },
   "resolutions": {
-    "chai": "5.1.1"
+    "chai": "5.1.2"
   },
   "engines": {
     "node": ">=18.18.2"
